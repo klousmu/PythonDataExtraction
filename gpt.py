@@ -84,4 +84,5 @@ def main(source='pdf', path_or_url=''):
 
 # Example usage:
 # main('web', 'https://example.com/tablepage')
+
 # main('pdf', '/path/to/file.pdf')

@@ -24,11 +24,13 @@ def extract_tables_from_pdf(pdf_path):
     tables = []
     with pdfplumber.open(pdf_path) as pdf:
         
+        '''
         for i, page in enumerate(pdf.pages):
             if i !=5:
                 continue
+        '''
             #for table in page.find_tables():
-            for table in page.extract_tables():
+         refor table in page.extract_tables():
                 #txt = table.extract(x_tolerance = 0.5,y_tolerance = 0.5)
                 df = pd.DataFrame(table[1:], columns=table[0])
                 tables.append(df)
